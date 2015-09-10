@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<title>HOLIDE :: Robert White</title>
+
+</head>
+
+<body>
+
+<div id="container" align="center">
+<div id="header">
+<h1>HOLIDE</h1>
+
+<div id="nav">
+<a href="#">Home</a> &nbsp; <a href="https://airobert.github.io/">Robert</a> &nbsp; <a href="https://www.rocq.inria.fr/deducteam/">INRIA</a> &nbsp;
+</div>
+</div>
+
+<div id="content">
+<br><br>
+<h3>Welcome to Holide</h3>
+<p>Holide is a proof translator. It takes proofs in <a href="http://www.gilith.com/research/opentheory/">OpenTheory</a>'s <a href"http://opentheory.gilith.com/">Repo</a> and translates them to <a href="http://dedukti.gforge.inria.fr/">Dedukti</a> format for proof checking. The most recent version is Holide2 (for proofs articles in OpenTheory version 6).</p> 
+<h3>News</h3>
+<p>For the first time, all the proofs in OpenTheory repository were verified (with OpenTheory, Holide2 and Dedukti). </p>
+
+<h3>Download</h3>
+<p>  <a href="https://github.com/airobert/holide">Download</a> </p>
+
+<h3> Evaluation </h3>
+<p> The following two tables shows the difference between Holide1 and Holide2. The first table shows the size of article files and the translation time. The second table shows the size of translated files (in Dedukti format) and the corresponding proof checking time. </p> 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>
+<table class="tg" align="center">
+  <tr>
+    <th class="tg-031e" rowspan="2"><b>Package</b></th>
+    <th class="tg-031e" colspan="2"><b>Holide1</b></th>
+    <th class="tg-031e" colspan="2"><b>Holide2</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">File Size (KB)</td>
+    <td class="tg-031e">Time (s)</td>
+    <td class="tg-031e">File Size (KB)</td>
+    <td class="tg-031e">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">base</td>
+    <td class="tg-031e" align="center">1,436</td>
+    <td class="tg-031e" align="center">19.35</td>
+    <td class="tg-031e" align="center">1,194</td>
+    <td class="tg-031e" align="center">19.42</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >cl</td>
+    <td class="tg-031e" align="center">313</td>
+    <td class="tg-031e" align="center">5.77</td>
+    <td class="tg-031e" align="center">313</td>
+    <td class="tg-031e" align="center">5.56</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >empty</td>
+    <td class="tg-031e" align="center">0</td>
+    <td class="tg-031e" align="center">0.20</td>
+    <td class="tg-031e" align="center">0</td>
+    <td class="tg-031e" align="center">0.00</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >gfp</td>
+    <td class="tg-031e" align="center">136</td>
+    <td class="tg-031e" align="center">1.42</td>
+    <td class="tg-031e" align="center">112</td>
+    <td class="tg-031e" align="center">1.35</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >lazy-list</td>
+    <td class="tg-031e" align="center">1390</td>
+    <td class="tg-031e" align="center">31.43</td>
+    <td class="tg-031e" align="center">1,391</td>
+    <td class="tg-031e" align="center">31.78</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >modular</td>
+    <td class="tg-031e" align="center">45</td>
+    <td class="tg-031e" align="center">1.13</td>
+    <td class="tg-031e" align="center">37</td>
+    <td class="tg-031e" align="center">0.37</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >natural-bits</td>
+    <td class="tg-031e" align="center">162</td>
+    <td class="tg-031e" align="center">1.43</td>
+    <td class="tg-031e" align="center">132</td>
+    <td class="tg-031e" align="center">1.39</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >natural-divides</td>
+    <td class="tg-031e" align="center">193</td>
+    <td class="tg-031e" align="center">2.10</td>
+    <td class="tg-031e" align="center">157</td>
+    <td class="tg-031e" align="center">1.94</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >natural-fibonacci</td>
+    <td class="tg-031e" align="center">130</td>
+    <td class="tg-031e" align="center">1.31</td>
+    <td class="tg-031e" align="center">108</td>
+    <td class="tg-031e" align="center">1.24</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >natural-prime</td>
+    <td class="tg-031e" align="center">140</td>
+    <td class="tg-031e" align="center">1.46</td>
+    <td class="tg-031e" align="center">116</td>
+    <td class="tg-031e" align="center">1.34</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >parser</td>
+    <td class="tg-031e" align="center">240</td>
+    <td class="tg-031e" align="center">3.22</td>
+    <td class="tg-031e" align="center">204</td>
+    <td class="tg-031e" align="center">3.15</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >probability</td>
+    <td class="tg-031e" align="center">26</td>
+    <td class="tg-031e" align="center">0.30</td>
+    <td class="tg-031e" align="center">23</td>
+    <td class="tg-031e" align="center">0.23</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >stream</td>
+    <td class="tg-031e" align="center">75</td>
+    <td class="tg-031e" align="center">0.75</td>
+    <td class="tg-031e" align="center">63</td>
+    <td class="tg-031e" align="center">0.73</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" >word10</td>
+    <td class="tg-031e" align="center">86</td>
+    <td class="tg-031e" align="center">0.76</td>
+    <td class="tg-031e" align="center">71</td>
+    <td class="tg-031e" align="center">0.62</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" >word12</td>
+    <td class="tg-031e" align="center">88</td>
+    <td class="tg-031e" align="center">0.79</td>
+    <td class="tg-031e" align="center">72</td>
+    <td class="tg-031e" align="center">0.75</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" >word16</td>
+    <td class="tg-031e" align="center">131</td>
+    <td class="tg-031e" align="center">1.60</td>
+    <td class="tg-031e" align="center">107</td>
+    <td class="tg-031e" align="center">0.77</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" >word5</td>
+    <td class="tg-031e" align="center">77</td>
+    <td class="tg-031e" align="center">0.70</td>
+    <td class="tg-031e" align="center">64</td>
+    <td class="tg-031e" align="center">1.56</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" > <b>Overall</b></td>
+    <td class="tg-031e" align="center">4,668</td>
+    <td class="tg-031e" align="center">73.73</td>
+    <td class="tg-031e" align="center">4,377</td>
+    <td class="tg-031e" align="center">72.21</td>
+  </tr>
+</table>
+
+<p> </p>
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>
+<table class="tg" align="center">
+  <tr>
+    <th class="tg-031e" rowspan="2"><b>Package</b></th>
+    <th class="tg-031e" colspan="2"><b>Dedukti (articles by Holide 1)</b></th>
+    <th class="tg-031e" colspan="2"><b>Dedukti (articles by Holide 2)</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">File Size (KB)</td>
+    <td class="tg-031e">Time (s)</td>
+    <td class="tg-031e">File Size (KB)</td>
+    <td class="tg-031e">Time (s)</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">base</td>
+    <td class="tg-031e" align="center">4,681</td>
+    <td class="tg-031e" align="center">10.63</td>
+    <td class="tg-031e" align="center">4,440</td>
+    <td class="tg-031e" align="center">9.74</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >cl</td>
+    <td class="tg-031e" align="center">1,219</td>
+    <td class="tg-031e" align="center">2.42</td>
+    <td class="tg-031e" align="center">1,219</td>
+    <td class="tg-031e" align="center">2.46</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >empty</td>
+    <td class="tg-031e" align="center">0</td>
+    <td class="tg-031e" align="center">0.00</td>
+    <td class="tg-031e" align="center">0</td>
+    <td class="tg-031e" align="center">0.00</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >gfp</td>
+    <td class="tg-031e" align="center">400</td>
+    <td class="tg-031e" align="center">0.73</td>
+    <td class="tg-031e" align="center">375</td>
+    <td class="tg-031e" align="center">0.65</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >lazy-list</td>
+    <td class="tg-031e" align="center">5718</td>
+    <td class="tg-031e" align="center">13.31</td>
+    <td class="tg-031e" align="center">5,717</td>
+    <td class="tg-031e" align="center">13.11</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >modular</td>
+    <td class="tg-031e" align="center">120</td>
+    <td class="tg-031e" align="center">0.19</td>
+    <td class="tg-031e" align="center">111</td>
+    <td class="tg-031e" align="center">0.17</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >natural-bits</td>
+    <td class="tg-031e" align="center">452</td>
+    <td class="tg-031e" align="center">0.74</td>
+    <td class="tg-031e" align="center">419</td>
+    <td class="tg-031e" align="center">0.68</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" >natural-divides</td>
+    <td class="tg-031e" align="center">599</td>
+    <td class="tg-031e" align="center">1.11</td>
+    <td class="tg-031e" align="center">566</td>
+    <td class="tg-031e" align="center">0.99</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >natural-fibonacci</td>
+    <td class="tg-031e" align="center">378</td>
+    <td class="tg-031e" align="center">0.67</td>
+    <td class="tg-031e" align="center">354</td>
+    <td class="tg-031e" align="center">0.60</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >natural-prime</td>
+    <td class="tg-031e" align="center">408</td>
+    <td class="tg-031e" align="center">0.72</td>
+    <td class="tg-031e" align="center">388</td>
+    <td class="tg-031e" align="center">0.65</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >parser</td>
+    <td class="tg-031e" align="center">802</td>
+    <td class="tg-031e" align="center">1.87</td>
+    <td class="tg-031e" align="center">776</td>
+    <td class="tg-031e" align="center">1.69</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >probability</td>
+    <td class="tg-031e" align="center">72</td>
+    <td class="tg-031e" align="center">0.12</td>
+    <td class="tg-031e" align="center">69</td>
+    <td class="tg-031e" align="center">0.11</td>
+  </tr>
+   <tr>
+    <td class="tg-031e" >stream</td>
+    <td class="tg-031e" align="center">221</td>
+    <td class="tg-031e" align="center">0.41</td>
+    <td class="tg-031e" align="center">211</td>
+    <td class="tg-031e" align="center">0.38</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" >word10</td>
+    <td class="tg-031e" align="center">234</td>
+    <td class="tg-031e" align="center">0.38</td>
+    <td class="tg-031e" align="center">216</td>
+    <td class="tg-031e" align="center">0.29</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" >word12</td>
+    <td class="tg-031e" align="center">239</td>
+    <td class="tg-031e" align="center">0.40</td>
+    <td class="tg-031e" align="center">220</td>
+    <td class="tg-031e" align="center">0.35</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" >word16</td>
+    <td class="tg-031e" align="center">396</td>
+    <td class="tg-031e" align="center">0.80</td>
+    <td class="tg-031e" align="center">364</td>
+    <td class="tg-031e" align="center">0.36</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" >word5</td>
+    <td class="tg-031e" align="center">207</td>
+    <td class="tg-031e" align="center">0.33</td>
+    <td class="tg-031e" align="center">192</td>
+    <td class="tg-031e" align="center">0.72</td>
+  </tr>
+     <tr>
+    <td class="tg-031e" > <b>Overall</b></td>
+    <td class="tg-031e" align="center">16,146</td>
+    <td class="tg-031e" align="center">34.83</td>
+    <td class="tg-031e" align="center">15,637</td>
+    <td class="tg-031e" align="center">32.95</td>
+  </tr>
+</table>
+
+<p>This announced the completion of proof checking of all OpenTheory packages avaliable. The success of checking of all these packages also provides evidence that OpenTheory being a reliable platform for higher order proofs. Further more, this verified the correctness of updates of Holide1 and Holide2. In addition, this also provided evidence for the correctness of HOL Light kernel and proofs from a different perspective</p>
+  </div>
+
+
+
+
+  
+<div id="footer">
+Copyright &#169; Robert White | All Rights Reserved  
+</div>
+</div>
+
+</body>
+</html>
