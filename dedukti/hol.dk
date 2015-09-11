@@ -1,0 +1,80 @@
+#NAME hol.
+
+(;-----------;)
+(; HOL Types ;)
+(;-----------;)
+
+type : Type.
+
+bool : type.
+ind  : type.
+arr  : type -> type -> type.
+
+(;-----------;)
+(; HOL Terms ;)
+(;-----------;)
+
+term : type -> Type.
+[a : type, b : type] term (arr a b) --> term a -> term b.
+
+eq : a : type -> term (arr a (arr a bool)).
+select : a : type -> term (arr (arr a bool) a).
+true : term bool :=
+  eq (arr bool bool) (p : term bool => p) (p : term bool => p).
+witness : a : type -> term a :=
+  a : type => select a (x : term a => true).
+
+(;------------;)
+(; HOL Proofs ;)
+(;------------;)
+
+proof : term bool -> Type.
+
+REFL : a : type -> t : term a ->
+  proof (eq a t t).
+ABS_THM : a : type -> b : type -> f : (term a -> term b) -> g : (term a -> term b) ->
+  (x : term a -> proof (eq b (f x) (g x))) ->
+  proof (eq (arr a b) f g).  
+APP_THM : a : type -> b : type -> f : term (arr a b) -> g : term (arr a b) -> x : term a -> y : term a ->
+  proof (eq (arr a b) f g) ->
+  proof (eq a x y) ->
+  proof (eq b (f x) (g y)).
+PROP_EXT : p : term bool -> q : term bool ->
+  (proof q -> proof p) ->
+  (proof p -> proof q) ->
+  proof (eq bool p q).
+EQ_MP : p : term bool -> q : term bool ->
+  proof (eq bool p q) ->
+  proof p ->
+  proof q.
+BETA_CONV : a : type -> b : type -> f : (term a -> term b) -> u : term a ->
+  proof (eq b (f u) (f u)) :=
+    a : type => b : type => f : (term a -> term b) => u : term a =>
+    REFL b (f u).
+
+(;------------;)
+(; Version 6  ;)
+(;------------;)
+
+TRANS : a : type -> x : term a -> y : term a -> z : term a -> proof (eq a x y) -> proof (eq a y z) -> proof (eq a x z). 
+
+PROVE_HYP : x : term bool -> y : term bool -> proof x -> (proof x -> proof y) -> proof y.
+
+SYM : a : type -> x : term a -> y : term a -> proof (eq a x y) -> proof (eq a y x). 
+
+
+
+(;------------------------;)
+(; Additionals for HOLALA ;)
+(;------------------------;)
+
+  
+imp : term bool -> term bool -> term bool.
+forall : a : type -> (term (arr a bool) -> (term bool)).
+
+MP : p : term bool -> q : term bool -> proof (imp p q) -> proof p -> proof q.
+(; DISCH : p : term bool -> q : term bool -> proof p -> proof q -> proof (imp p q). ;)
+DISCH : u : term bool -> t : term bool -> (proof u -> proof t) -> proof (imp u t).
+(; GEN : a : type -> p': (term a -> term bool) -> x: term a -> proof (p' x) -> proof (forall a (y:(term a)=> (p' y))). ;)
+GEN : a : type ->  t: (term a -> term bool) -> (x:term a -> proof (t x))-> proof (forall a t). 
+SPEC : a : type -> t': (term a -> term bool) -> u : term a -> proof (forall a t') -> proof (t' u). 
