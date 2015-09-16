@@ -116,10 +116,10 @@ let translate_cst c =
   match c with
   | "=" -> Name.hol "eq"
   | "select" -> Name.hol "select"
-  | "Data.Bool.==>" -> Name.hol "imp"
-  | "==>" -> Name.hol "imp"
-  | "Data.Bool.!" -> Name.hol "forall"
-  | "!" -> Name.hol "forall"
+  (* | "Data.Bool.==>" -> Name.hol "imp" *)
+  (* | "==>" -> Name.hol "imp" *)
+  (* | "Data.Bool.!" -> Name.hol "forall" *)
+  (* | "!" -> Name.hol "forall" *)
   (* | "Data.Bool.~" -> Name.hol "not" *)
   (* | "~" -> Name.hol "not" *)
   (* | "Data.Bool.\\/" -> Name.hol "or" *)

@@ -63,18 +63,3 @@ PROVE_HYP : x : term bool -> y : term bool -> proof x -> (proof x -> proof y) ->
 SYM : a : type -> x : term a -> y : term a -> proof (eq a x y) -> proof (eq a y x). 
 
 
-
-(;------------------------;)
-(; Additionals for HOLALA ;)
-(;------------------------;)
-
-  
-imp : term bool -> term bool -> term bool.
-forall : a : type -> (term (arr a bool) -> (term bool)).
-
-MP : p : term bool -> q : term bool -> proof (imp p q) -> proof p -> proof q.
-(; DISCH : p : term bool -> q : term bool -> proof p -> proof q -> proof (imp p q). ;)
-DISCH : u : term bool -> t : term bool -> (proof u -> proof t) -> proof (imp u t).
-(; GEN : a : type -> p': (term a -> term bool) -> x: term a -> proof (p' x) -> proof (forall a (y:(term a)=> (p' y))). ;)
-GEN : a : type ->  t: (term a -> term bool) -> (x:term a -> proof (t x))-> proof (forall a t). 
-SPEC : a : type -> t': (term a -> term bool) -> u : term a -> proof (forall a t') -> proof (t' u). 
