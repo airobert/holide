@@ -25,10 +25,10 @@ let csts =
 ref [
     "=", Type.App("->", [a; a_bl]);
     "select", Type.App("->", [a_bl; a]);
-    "Data.Bool.==>" , Type.App("->", [bl; Type.App("->",[bl; bl])]);
+   (*  "Data.Bool.==>" , Type.App("->", [bl; Type.App("->",[bl; bl])]);
     "Data.Bool.!" , Type.App("->", [a_bl; bl]);
     "==>", Type.App("->", [bl; Type.App("->",[bl; bl])]);
-    "!", Type.App("->", [a_bl; bl])
+    "!", Type.App("->", [a_bl; bl]) *)
   ]
 
 let is_declared c = List.mem_assoc c !csts
