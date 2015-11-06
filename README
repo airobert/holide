@@ -9,10 +9,10 @@ is now working with OpenTheory version 6.
 The source code is available online at:
 https://gforge.inria.fr/projects/holide/
 
-There are three versions:
-version1: the old version portable with OpenTheory version5 (out of date)
+There are three branches:
+version1: the old version portable with OpenTheory version5
 version2: the new version portable with OpenTheory version6
-version2x: the new version portable with Holala (experimental work)
+version2x: the new version portable with Holala and OpenTheory version 6
 
 You need OCaml to compile it. It was tested with OCaml 3.12.0, but previous
 versions should work just as well. To compile, simply run 'make' in the main

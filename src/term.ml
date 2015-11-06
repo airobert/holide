@@ -25,10 +25,10 @@ let csts =
 ref [
     "=", Type.App("->", [a; a_bl]);
     "select", Type.App("->", [a_bl; a]);
-   (*  "Data.Bool.==>" , Type.App("->", [bl; Type.App("->",[bl; bl])]);
+    "Data.Bool.==>" , Type.App("->", [bl; Type.App("->",[bl; bl])]);
     "Data.Bool.!" , Type.App("->", [a_bl; bl]);
     "==>", Type.App("->", [bl; Type.App("->",[bl; bl])]);
-    "!", Type.App("->", [a_bl; bl]) *)
+    "!", Type.App("->", [a_bl; bl])
   ]
 
 let is_declared c = List.mem_assoc c !csts
@@ -116,10 +116,10 @@ let translate_cst c =
   match c with
   | "=" -> Name.hol "eq"
   | "select" -> Name.hol "select"
-  (* | "Data.Bool.==>" -> Name.hol "imp" *)
-  (* | "==>" -> Name.hol "imp" *)
-  (* | "Data.Bool.!" -> Name.hol "forall" *)
-  (* | "!" -> Name.hol "forall" *)
+  | "Data.Bool.==>" -> Name.hol "imp"
+  | "==>" -> Name.hol "imp"
+  | "Data.Bool.!" -> Name.hol "forall"
+  | "!" -> Name.hol "forall"
   (* | "Data.Bool.~" -> Name.hol "not" *)
   (* | "~" -> Name.hol "not" *)
   (* | "Data.Bool.\\/" -> Name.hol "or" *)
